@@ -6,7 +6,7 @@ $rojo: #ee220d;
 $azul-botones: #003462;
 
 @mixin borderRed {
-  border: solid 1px red;
+  border: solid 1px red !important;
 }
 
 @mixin formatoBtns {
@@ -52,17 +52,12 @@ header {
   margin: 0 auto;
 
   #image-slider {
-    height: 45vh;
+    // height: 45vh;
     overflow: hidden;
 
     .splice_slide {
       height: 100%;
       width: 100%;
-
-      img {
-        height: 100%;
-        width: 100%;
-      }
     }
   }
 
@@ -165,7 +160,7 @@ header {
 
   .container{
     #image-slider {
-      height: 60vh;
+      // height: 70vh;
     }
     #info-buttons {
       flex-direction: row;
@@ -189,6 +184,8 @@ header {
   body {
     // background-color: green;
   }
+
+  
 }
 
 @media (min-width: 1024px) {
@@ -197,6 +194,9 @@ header {
   }
 
   .container{
+    #image-slider {
+      max-height: 70vh;
+    }
     #info-buttons {
       flex-wrap: wrap;
       .info-buttons{
