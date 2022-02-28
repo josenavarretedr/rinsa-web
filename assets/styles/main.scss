@@ -1,0 +1,208 @@
+$fucsia: #991a5e;
+$turquesa: #027b76;
+$azul: #004d80;
+$amarillo: #ff9301;
+$rojo: #ee220d;
+$azul-botones: #003462;
+
+@mixin borderRed {
+  border: solid 1px red;
+}
+
+@mixin formatoBtns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  i {
+    font-size: 2.25rem;
+    padding: 10px;
+    
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.5s;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  padding: 0 2.5%;
+  .eslogan {
+    text-align: right;
+    padding: 10px 0;
+  }
+  .brand {
+    text-align: left;
+    padding: 10px 0;
+  }
+  h1 {
+    text-align: left;
+  }
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+
+  #image-slider {
+    height: 45vh;
+    overflow: hidden;
+
+    .splice_slide {
+      height: 100%;
+      width: 100%;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  #home-buttons {
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+    .home-buttons {
+      @include formatoBtns;
+      width: 40%;
+      text-align: center;
+
+      h4 {
+        padding: 5%;
+      }
+
+      a {
+      color: #000000;
+      text-decoration: none;
+        &:hover {
+          color: $azul-botones;
+        }
+      }
+    }
+  }
+
+  #info-buttons{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .info-buttons{
+      text-decoration: none;
+      margin: 0;
+      // padding: 2.5%;
+      width: 90%;
+      text-align: center;
+      color:#fff;
+      h3 {
+        padding: 5%;
+      }
+      @include formatoBtns;
+    }
+    #info-1{
+      background-color: $fucsia;
+      &:hover{
+        background-color:#fff;
+        * {
+          color: $fucsia; 
+        }
+      }
+    }
+    #info-2{
+      background-color: $turquesa;
+      &:hover{
+        background-color:#fff;
+        *{
+          color: $turquesa;
+        }
+      }
+    }
+    #info-3{
+      background-color: $azul;
+      &:hover {
+        background-color: #fff;
+        *{
+          color: $azul;
+        }
+      }
+    }
+    #info-4{
+      background-color: $amarillo;
+      &:hover{
+        background-color:#fff;
+        *{
+          color: $amarillo;
+        }
+      }
+    }
+    #info-5{
+      background-color: $rojo;
+      &:hover{
+        background-color:#fff;
+        *{
+          color: $rojo;
+        }
+      }
+    }
+  }
+}
+
+#footer{
+  height: 500px;
+}
+
+@media (min-width: 480px) {
+  body {
+    // background-color: red;
+  }
+
+  .container{
+    #image-slider {
+      height: 60vh;
+    }
+    #info-buttons {
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      .info-buttons{
+      margin: 5px;
+      width: 40%;
+        i{
+          text-align: right;
+        }
+        h3{
+          text-align-last: left;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    // background-color: green;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    // background-color: blue;
+  }
+
+  .container{
+    #info-buttons {
+      flex-wrap: wrap;
+      .info-buttons{
+        margin: 0;
+        width: 20%;
+      }
+    }
+  }
+}
