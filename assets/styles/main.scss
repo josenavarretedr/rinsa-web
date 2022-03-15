@@ -150,7 +150,13 @@ header {
 }
 
 #footer{
-  height: 500px;
+  // height: 500px;
+  // @include borderRed;
+  margin: 3rem 0 1.5rem 0;
+  display: flex;
+  justify-content: space-around;
+  font-size: .8rem;
+  font-weight: 200 !important;
 }
 
 @media (min-width: 480px) {
