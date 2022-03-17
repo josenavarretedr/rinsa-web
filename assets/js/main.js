@@ -13,4 +13,4 @@ let slider = new Splide('#image-slider', {
 
 slider.mount()
 
-console.log('Hola')
+console.log('Ufff temón 🔥')
