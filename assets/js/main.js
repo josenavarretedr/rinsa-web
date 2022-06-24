@@ -12,5 +12,7 @@ let slider = new Splide('#image-slider', {
 })
 
 slider.mount()
-
-console.log('Ufff temón 🔥')
+console.log('Disfruta')
+console.log('de este')
+console.log('temón')
+console.log('Siguenos en IG 😁');
